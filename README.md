@@ -3,9 +3,10 @@
 # Step 1
 
 
-root build.gradle add ：
+## root build.gradle add ：
 
-` 
+``` Java 
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -33,14 +34,17 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
- `
+
+```
  
 # Step 2
 
-library build.gradle add：
+## library build.gradle add：
 
 
-`
+
+``` Java 
+
 apply plugin: 'com.android.library'
 
 android {
@@ -91,23 +95,26 @@ ext {
 apply from:'https://raw.githubusercontent.com/13120241790/JcenterConfig/master/install.gradle'
 apply from:'https://raw.githubusercontent.com/13120241790/JcenterConfig/master/bintray.gradle'
 
-`
+
+```
 
 # Step 3
 
-local.properties add:
+## local.properties add:
 
-`
+
+``` Java 
 
 sdk.dir=/Users/zhouxuming/Library/Android/sdk
 bintray.apikey=221bea1b435d2702fc54211e9faa5f66e28501a8
 bintray.user=13120241790
 
-`
+
+```
 
 # Step 4
 
-Terminal input: ./gradlew bintrayupload
+## Terminal input: ./gradlew bintrayupload
 
 
 
